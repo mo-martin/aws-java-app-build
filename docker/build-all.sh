@@ -23,7 +23,7 @@ rm -rf ~/tmp/java-app/.gitignore
 
 cp -r ~/tmp/java-app/. ~/scripts/docker/java-app/app/
 cp -r ~/scripts/docker/java-app/app/. /opt/jboss/java-app/
-mkdir -p /opt/jboss/java-app
+sudo mkdir -p /opt/jboss/java-app
 
 pushd java-app
 docker build --tag java-app:latest .
