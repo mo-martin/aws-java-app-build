@@ -5,6 +5,9 @@ docker rm java-app
 find java-app/app/* -type d -not -name '.gitignore' -print0 | xargs -0 rm -rf --
 set -e
 
+sudo apt-get update
+sudo apt-get maven
+
 git clone https://github.com/mo-martin/c1-java-app.git ~/java-app
 
 rm -rf ~/tmp/java-app/
