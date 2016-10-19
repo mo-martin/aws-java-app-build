@@ -5,7 +5,6 @@ docker rm java-app
 find java-app/app/* -type d -not -name '.gitignore' -print0 | xargs -0 rm -rf --
 set -e
 
-git clone https://github.com/mo-martin/aws-java-app-build.git ~/scripts
 git clone https://github.com/mo-martin/c1-java-app.git ~/java-app
 
 rm -rf ~/tmp/java-app/
