@@ -1,0 +1,6 @@
+java/
+php/
+backup/
+.vagrant
+.git
+.DS_Store
