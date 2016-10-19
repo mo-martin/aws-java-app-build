@@ -23,11 +23,12 @@ rm -rf ~/tmp/java-app/.gitignore
 
 cp -r ~/tmp/java-app/. ~/scripts/docker/java-app/app/
 cp -r ~/scripts/docker/java-app/app/. /opt/jboss/java-app/
+cp ~/synced/java-app/target/CompactDiscRESTEnterprise-0.0.1-SNAPSHOT.war ~/scripts/docker/
 sudo mkdir -p /opt/jboss/java-app
 
 pushd java-app
 docker build --tag java-app:latest .
 popd
 
-docker run --name java-app
+sudo docker run --name java-app -p 8080:8080 -p 9990:9990 -d java-app:latest
 docker ps -a
