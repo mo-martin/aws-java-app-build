@@ -6,16 +6,16 @@ find java-app/app/* -type d -not -name '.gitignore' -print0 | xargs -0 rm -rf --
 set -e
 
 sudo apt-get update
-sudo apt-get maven
+sudo apt-get install maven
 
-git clone https://github.com/mo-martin/c1-java-app.git ~/java-app
+git clone https://github.com/mo-martin/c1-java-app.git ~/synced/java-app
 
 rm -rf ~/tmp/java-app/
 mkdir -p ~/tmp/java-app/
 
-cp -r ~/java-app/. ~/tmp/java-app/
-rm -rf ~/java-app/.git
-rm -rf ~/java-app/.gitignore
+cp -r ~/synced/java-app/. ~/tmp/java-app/
+rm -rf ~/tmp/java-app/.git
+rm -rf ~/tmp/java-app/.gitignore
 
 cp -r ~/tmp/java-app/. ~/scripts/docker/java-app/app
 

@@ -16,7 +16,7 @@ RUN cd $HOME \
 
 CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0"]
 
-ADD app /java
-RUN cd /java && mvn install
-ADD /java/target/app.war /opt/jboss/wildfly/standalone/deployments/
+ADD app /java-app
+RUN cd /java-app && sudo mvn install
+ADD /java-app/target/CompactDiscRESTEnterprise-0.0.1-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/
 EXPOSE 8080
