@@ -8,7 +8,10 @@ set -e
 sudo apt-get update
 sudo apt-get install maven
 
-git clone https://github.com/mo-martin/c1-java-app.git ~/synced/java-app
+$directory='~/synced/java-app'
+if [ ! -d $directory ]; then
+  git clone https://github.com/mo-martin/c1-java-app.git ~/synced/java-app
+fi
 
 rm -rf ~/tmp/java-app/
 mkdir -p ~/tmp/java-app/
@@ -17,7 +20,7 @@ cp -r ~/synced/java-app/. ~/tmp/java-app/
 rm -rf ~/tmp/java-app/.git
 rm -rf ~/tmp/java-app/.gitignore
 
-cp -r ~/tmp/java-app/. ~/scripts/docker/java-app/app
+cp -r ~/tmp/java-app/. ~/scripts/docker/java-app/app/
 
 
 pushd java-app
