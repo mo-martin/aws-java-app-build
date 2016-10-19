@@ -9,8 +9,9 @@ sudo apt-get update
 sudo apt-get install maven
 
 $directory='~/synced/java-app'
-if [ ! -d $directory ]; then
-  git clone https://github.com/mo-martin/c1-java-app.git ~/synced/java-app
+if [ -d $directory ]; then
+  else
+    git clone https://github.com/mo-martin/c1-java-app.git ~/synced/java-app
 fi
 
 rm -rf ~/tmp/java-app/
