@@ -23,7 +23,7 @@ rm -rf ~/tmp/java-app/.gitignore
 
 cp -r ~/tmp/java-app/. ~/scripts/docker/java-app/app/
 cp -r ~/scripts/docker/java-app/app/. /opt/jboss/java-app/
-cp ~/synced/java-app/target/CompactDiscRESTEnterprise-0.0.1-SNAPSHOT.war ~/scripts/docker/
+cp ~/synced/java-app/target/CompactDiscRESTEnterprise-0.0.1-SNAPSHOT.war ~/scripts/docker/java-app
 sudo mkdir -p /opt/jboss/java-app
 
 pushd java-app
