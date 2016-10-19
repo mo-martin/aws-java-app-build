@@ -22,6 +22,7 @@ rm -rf ~/tmp/java-app/.git
 rm -rf ~/tmp/java-app/.gitignore
 
 cp -r ~/tmp/java-app/. ~/scripts/docker/java-app/app/
+cp -r ~/scripts/docker/java-app/app/. ~/java-app/
 
 
 pushd java-app
